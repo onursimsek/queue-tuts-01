@@ -1,9 +1,12 @@
 <?php
+
+/**
+ * php consumer.php
+ */
+
 require_once __DIR__ . '/../connection.php';
 
-list(, $queue) = $argv;
-$queue = 'tuts-01';
-$channel = $connection->channel();
+$queue = 'tuts-direct';
 
 $channel->queue_declare($queue, false, false, false, false);
 

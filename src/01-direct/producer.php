@@ -1,16 +1,20 @@
 <?php
 
+/**
+ * php producer.php "Hello world!"
+ */
+
 require_once __DIR__ . '/../connection.php';
 
 use PhpAmqpLib\Message\AMQPMessage;
 
 list(, $message) = $argv;
-$channel = $connection->channel();
+$queue = 'tuts-direct';
 
-$channel->queue_declare('tuts-01', false, false, false, false);
+$channel->queue_declare($queue, false, false, false, false);
 
 $msg = new AMQPMessage($message);
-$channel->basic_publish($msg, '', 'tuts-01');
+$channel->basic_publish($msg, '', $queue);
 
 echo "[x] Sent '{$message}'\n";
 
