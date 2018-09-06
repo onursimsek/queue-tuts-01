@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * php 06-rpc/consumer.php
+ */
+
 use PhpAmqpLib\Message\AMQPMessage;
 
 require_once __DIR__ . '/../connection.php';

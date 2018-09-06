@@ -1,4 +1,9 @@
 <?php
+
+/**
+ * php 06-rpc/producer.php
+ */
+
 require_once __DIR__ . '/../connection.php';
 
 use PhpAmqpLib\Connection\AMQPStreamConnection;

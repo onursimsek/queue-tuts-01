@@ -2,6 +2,8 @@
 
 /**
  * php producer.php red.rabbit Hello
+ *
+ * for i in "blue" "pink" "black"; do php 05-topic/producer.php $i.rabbit "hello $i rabbit"; done
  */
 
 require_once __DIR__ . '/../connection.php';
